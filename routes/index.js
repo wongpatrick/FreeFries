@@ -40,7 +40,7 @@ router.get("/", function(req,res){
 
 router.get("/test", function(req,res){
   console.log("someone has entered test")
-  NBA.findPlayer('Stephen Curry').then(console.log);
+  var curry = NBA.findPlayer('Stephen Curry');
   res.render("landing", {freeFries: "TEST", numberOfMadeThreePointers: "TEST"})
 })
 
