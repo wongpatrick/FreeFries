@@ -4,7 +4,7 @@ var middlewareObj= {};
 const NBA = require("nba");
 
 router.get("/", function(req,res){
-  console.log("someone has entered")
+  console.log("someone has entered live site")
     // NBA.stats.commonTeamRoster({ TeamID: 1610612761}).then(console.log);
     NBA.stats.shots({
       TeamID : 1610612761,
@@ -41,12 +41,13 @@ router.get("/", function(req,res){
 router.get("/test", function(req,res){
   console.log("someone has entered test")
   var curry = NBA.findPlayer('Stephen Curry');
+  console.log(curry)
   res.render("landing", {freeFries: "TEST", numberOfMadeThreePointers: "TEST"})
 })
 
 router.get("/hello", function(req,res){
   console.log("someone has entered test")
-  res.status(200).render("landing", {freeFries: "Hello", numberOfMadeThreePointers: "Hello"}).end();
+  res.status(200).render("landing", {freeFries: "Hello", numberOfMadeThreePointers: "Hello"});
 })
 
 
