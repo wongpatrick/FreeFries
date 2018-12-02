@@ -40,10 +40,7 @@ router.get("/", function(req,res){
 
 router.get("/test", function(req,res){
   console.log("someone has entered test")
-  var curry = NBA.stats.shots({
-    TeamID : 1610612761,
-    LastNGames: "1"
-  })
+  var curry = NBA.stats.shots({TeamID : 1610612761, LastNGames: "1"})
   console.log(curry)
   res.render("landing", {freeFries: "TEST", numberOfMadeThreePointers: "TEST"})
 })
