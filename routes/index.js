@@ -44,4 +44,10 @@ router.get("/test", function(req,res){
   res.render("landing", {freeFries: "TEST", numberOfMadeThreePointers: "TEST"})
 })
 
+router.get("/hello", function(req,res){
+  console.log("someone has entered test")
+  res.render("landing", {freeFries: "Hello", numberOfMadeThreePointers: "Hello"})
+})
+
+
 module.exports = router;
