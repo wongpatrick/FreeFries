@@ -14,7 +14,7 @@ app.use(methodOverride("_method"));
 
 app.use(indexRoutes);
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log(process.env.PORT +" "+ process.env.IP)
+app.listen(4200, function(){
+    // console.log(process.env.PORT +" "+ process.env.IP)
     console.log("FreeFries app has started");
 });
