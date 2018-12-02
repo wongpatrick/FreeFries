@@ -14,7 +14,7 @@ app.use(methodOverride("_method"));
 
 app.use(indexRoutes);
 
-app.listen(4200, "127.0.0.1", function(){
-    console.log()
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log(process.env.PORT +" "+ process.env.IP)
     console.log("YelpCamp app has started");
 });
