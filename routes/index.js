@@ -46,7 +46,7 @@ router.get("/test", function(req,res){
 
 router.get("/hello", function(req,res){
   console.log("someone has entered test")
-  res.render("landing", {freeFries: "Hello", numberOfMadeThreePointers: "Hello"})
+  res.status(200).render("landing", {freeFries: "Hello", numberOfMadeThreePointers: "Hello"}).end();
 })
 
 
