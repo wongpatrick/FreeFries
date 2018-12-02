@@ -16,5 +16,5 @@ app.use(indexRoutes);
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log(process.env.PORT +" "+ process.env.IP)
-    console.log("YelpCamp app has started");
+    console.log("FreeFries app has started");
 });
