@@ -4,11 +4,13 @@ var middlewareObj= {};
 const NBA = require("nba");
 
 router.get("/", function(req,res){
+  console.log("someone has entered")
     // NBA.stats.commonTeamRoster({ TeamID: 1610612761}).then(console.log);
     NBA.stats.shots({
       TeamID : 1610612761,
       LastNGames: "1"
     }).then(function(stats){
+      console.log("I am getting stats out")
       var shotMade = 0;
       stats["shot_Chart_Detail"].forEach(function(shotDetail){
         if (shotDetail["shotType"] !== "2PT Field Goal") {
